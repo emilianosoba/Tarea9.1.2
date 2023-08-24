@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       container.appendChild(li);
     });
 
-    filterArray.sort();
+    filterArray.sort((a, b) => a.localeCompare(b));
 
     showList(filterArray);
   });
