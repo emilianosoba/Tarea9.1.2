@@ -38,5 +38,18 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
-  // Sugerencia de cómo mostrar el array => showList(strangeArray);
-});
+    const container = document.getElementById("list");
+  
+    const filterArray = strangeArray.filter((element) => typeof element === 'string');
+    
+  
+    filterArray.forEach((element) => {
+      const li = document.createElement("li");
+      li.textContent = element;
+      container.appendChild(li);
+    });
+
+    filterArray.sort();
+
+    showList(filterArray);
+  });
